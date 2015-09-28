@@ -1,0 +1,786 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+}
+
+@*@CurrentPage.GetGridHtml("content", "fanoe")*@
+
+
+
+
+
+
+<section class="featured">
+    <div id="index">
+        <!-- Responsive slider - START -->
+        <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+            <div class="slides" data-group="slides">
+                <ul>
+                    <li>
+                        <div class="slide-body" data-group="slide">
+                            <img src="img/1.jpg" alt="">
+                            <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                                <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
+                                <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>@CurrentPage.GetPropertyValue("subtitle")</h3></div>
+                                <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><a class="btn btn-primary" href="#team">Apply now!</a></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-body" data-group="slide">
+                            <img src="img/2.jpg" alt="">
+                            <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                                <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
+                                <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>@CurrentPage.GetPropertyValue("subtitle")</h3></div>
+                                <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><a class="btn btn-primary" href="#team">Apply now!</a></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-body" data-group="slide">
+                            <img src="img/6.jpg" alt="">
+                            <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                                <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                                    <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
+                                    <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>@CurrentPage.GetPropertyValue("subtitle")</h3></div>
+                                    <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><a class="btn btn-primary" href="#team">Apply now!</a></h3></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+            <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>
+
+
+        </div>
+        <!-- Responsive slider - END -->
+    </div>
+</section>
+
+<!--about-->
+<section id="section-about">
+    <div class="container">
+        <div class="about">
+            <div class="row mar-bot40">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="title">
+                        <div class="wow bounceIn">
+
+                            <h2 class="section-heading animated" data-animation="bounceInUp">Our Company</h2>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="row-slider">
+                    <div class="col-lg-6 mar-bot30">
+                        <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+                            <div class="slides" data-group="slides">
+                                <ul>
+
+                                    <div class="slide-body" data-group="slide">
+                                        <li><img alt="" class="img-responsive" src="img/9.jpg" width="100%" height="350" /></li>
+                                        <li><img alt="" class="img-responsive" src="img/10.jpg" width="100%" height="350" /></li>
+                                        <li><img alt="" class="img-responsive" src="img/11.jpg" width="100%" height="350" /></li>
+
+                                    </div>
+                                </ul>
+                                <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+                                <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ">
+                        <div class="company mar-left10">
+                            <h4>@CurrentPage.GetPropertyValue("ourCompanyHeader")</h4>
+                            <p>@CurrentPage.GetPropertyValue("aboutOurCompany")</p>
+                            <p>@CurrentPage.GetPropertyValue("aboutOurCompanyParagraph2")</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--/about-->
+<!-- spacer section:testimonial -->
+<section id="testimonials-3" class="section" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="align-center">
+                    <div class="testimonial pad-top40 pad-bot40 clearfix">
+                        <h5>
+                            As a certified e-file agent, we need you to create a password-protected account using your IRD number. This is part of our strict security and privacy guidelines.
+                        </h5>
+                        <br />
+                        <a class="btn btn-primary" href="#team">Apply now!</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services -->
+<section id="services" class="section pad-bot5 bg-white">
+    <div class="container">
+        <div class="row mar-bot5">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <div class="wow bounceIn" data-animation-delay="7.8s">
+
+                        <h2 class="section-heading animated">How it works</h2>
+                        <h4>@CurrentPage.GetPropertyValue("howItWorksCaption")</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mar-bot40">
+            <div class="col-lg-4">
+                <div class="wow bounceIn">
+                    <div class="align-center">
+
+                        <div class="wow rotateIn">
+                            <div class="service-col">
+                                <div class="service-icon">
+                                    <figure><i class="fa fa-laptop"></i></figure>
+                                </div>
+                                <h2><a href="#">Step 1</a></h2>
+                                <p>@CurrentPage.GetPropertyValue("stepOne")</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="align-center">
+                    <div class="wow bounceIn">
+
+                        <div class="wow rotateIn">
+                            <div class="service-col">
+                                <div class="service-icon">
+                                    <figure><i class="fa fa-calculator"></i></figure>
+                                </div>
+                                <h2><a href="#">Step 2</a></h2>
+                                <p>@CurrentPage.GetPropertyValue("stepTwo")</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="align-center">
+                    <div class="wow bounceIn">
+                        <div class="service-col">
+                            <div class="service-icon">
+                                <figure><i class="fa fa-usd"></i></figure>
+                            </div>
+                            <h2><a href="#">Step 3</a></h2>
+                            <p>@CurrentPage.GetPropertyValue("stepThree")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--/services-->
+<!-- spacer section:testimonial -->
+<section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="align-center">
+                    <div class="testimonial pad-top40 pad-bot40 clearfix">
+                        <h5>
+                            As a certified e-file agent, we need you to create a password-protected account using your IRD number. This is part of our strict security and privacy guidelines.
+                        </h5>
+                        <br />
+                        <a class="btn btn-primary" href="#team">Apply now!</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- team -->
+<section id="team" class="team-section appear clearfix">
+    <div class="container">
+
+        <div class="row mar-bot10">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <div class="wow bounceIn">
+
+                        <h2 class="section-heading animated" data-animation="bounceInUp">Application form</h2>
+                        <!--<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <ul role="tablist" class="nav nav-tabs" id="myTabs">
+            <li class="active" role="presentation" style="background-color:grey;border-right:1px white solid;"><a data-toggle="tab" role="tab" aria-controls="personal" href="#personal">Personal Details</a></li>
+            <li role="presentation" style="background-color:grey;border-right:1px white solid;"><a data-toggle="tab" role="tab" aria-controls="identificationtype" href="#identificationtype">Identification Type</a></li>
+            <li role="presentation" style="background-color:grey;border-right:1px white solid;"><a data-toggle="tab" role="tab" aria-controls="identificationdetails" href="#identificationdetails">Identification Details</a></li>
+            <li role="presentation" style="background-color:grey;border-right:1px white solid;"><a data-toggle="tab" role="tab" aria-controls="confirmation" href="#confirmation">Confirmation</a></li>
+            <li role="presentation" style="background-color:grey;"><a data-toggle="tab" role="tab" aria-controls="authoritytoact" href="#authoritytoact">Authority to Act</a></li>
+        </ul>
+
+        <div class="tab-content top-buffer">
+            <div id="personal" class="tab-pane active" role="tabpanel">
+                <form id="formpersonaldetailsid" role="form" class="form-horizontal" action="" method="post" data-toggle="validator">
+                    <input type="hidden" name="_token" value="cOv9HU4Mdpjs1ib3qTyOilrAmddnKuAA5wccKAnF">
+                    <h2>Personal Details</h2>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">IRD Number</label>
+                        <div class="col-sm-3">
+                            <input type="text" value="" id="irdnumber" name="irdnumber" class="form-control" data-error="IRD Number is required value." required="">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-3">
+                            <select id="ptitle" name="ptitle" class="form-control" required="">
+                                <option value=""></option>
+                                <option value="MR">MR</option>
+                                <option value="MRS">MRS</option>
+                                <option value="MISS">MISS</option>
+                                <option value="MS">MS</option>
+                                <option value="DR.">DR.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" value="" id="firstname" name="firstname" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Middle Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" value="" id="middlename" name="middlename" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" value="" id="lastname" name="lastname" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-inline">
+                        <label class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-10">
+                            <select id="bmonth" name="bmonth" class="form-control" required="">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select id="bday" name="bday" class="form-control" required="">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select id="byear" name="byear" class="form-control" required="">
+                                <option value=""></option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                                <option value="1979">1979</option>
+                                <option value="1978">1978</option>
+                                <option value="1977">1977</option>
+                                <option value="1976">1976</option>
+                                <option value="1975">1975</option>
+                                <option value="1974">1974</option>
+                                <option value="1973">1973</option>
+                                <option value="1972">1972</option>
+                                <option value="1971">1971</option>
+                                <option value="1970">1970</option>
+                                <option value="1969">1969</option>
+                                <option value="1968">1968</option>
+                                <option value="1967">1967</option>
+                                <option value="1966">1966</option>
+                                <option value="1965">1965</option>
+                                <option value="1964">1964</option>
+                                <option value="1963">1963</option>
+                                <option value="1962">1962</option>
+                                <option value="1961">1961</option>
+                                <option value="1960">1960</option>
+                                <option value="1959">1959</option>
+                                <option value="1958">1958</option>
+                                <option value="1957">1957</option>
+                                <option value="1956">1956</option>
+                                <option value="1955">1955</option>
+                                <option value="1954">1954</option>
+                                <option value="1953">1953</option>
+                                <option value="1952">1952</option>
+                                <option value="1951">1951</option>
+                                <option value="1950">1950</option>
+                                <option value="1949">1949</option>
+                                <option value="1948">1948</option>
+                                <option value="1947">1947</option>
+                                <option value="1946">1946</option>
+                                <option value="1945">1945</option>
+                                <option value="1944">1944</option>
+                                <option value="1943">1943</option>
+                                <option value="1942">1942</option>
+                                <option value="1941">1941</option>
+                                <option value="1940">1940</option>
+                                <option value="1939">1939</option>
+                                <option value="1938">1938</option>
+                                <option value="1937">1937</option>
+                                <option value="1936">1936</option>
+                                <option value="1935">1935</option>
+                                <option value="1934">1934</option>
+                                <option value="1933">1933</option>
+                                <option value="1932">1932</option>
+                                <option value="1931">1931</option>
+                                <option value="1930">1930</option>
+                                <option value="1929">1929</option>
+                                <option value="1928">1928</option>
+                                <option value="1927">1927</option>
+                                <option value="1926">1926</option>
+                                <option value="1925">1925</option>
+                                <option value="1924">1924</option>
+                                <option value="1923">1923</option>
+                                <option value="1922">1922</option>
+                                <option value="1921">1921</option>
+                                <option value="1920">1920</option>
+                                <option value="1919">1919</option>
+                                <option value="1918">1918</option>
+                                <option value="1917">1917</option>
+                                <option value="1916">1916</option>
+                                <option value="1915">1915</option>
+                                <option value="1914">1914</option>
+                                <option value="1913">1913</option>
+                                <option value="1912">1912</option>
+                                <option value="1911">1911</option>
+                                <option value="1910">1910</option>
+                                <option value="1909">1909</option>
+                                <option value="1908">1908</option>
+                                <option value="1907">1907</option>
+                                <option value="1906">1906</option>
+                                <option value="1905">1905</option>
+                                <option value="1904">1904</option>
+                                <option value="1903">1903</option>
+                                <option value="1902">1902</option>
+                                <option value="1901">1901</option>
+                                <option value="1900">1900</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label top-buffer">Email</label>
+                        <div class="col-sm-6 top-buffer">
+                            <input type="email" value="" id="email" name="email" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email Confirmation</label>
+                        <div class="col-sm-6">
+                            <input type="email" value="" id="emailconf" name="emailconf" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Daytime Phone</label>
+                        <div class="col-sm-3">
+                            <input type="text" value="" id="daytimephone" name="daytimephone" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Mobile Phone</label>
+                        <div class="col-sm-3">
+                            <input type="text" value="" id="mobile" name="mobile" class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-3">
+                            <input type="password" placeholder="Password" class="form-control" id="ppassword" name="ppassword" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Confirm Passowrd</label>
+                        <div class="col-sm-3">
+                            <input type="password" placeholder="Password" class="form-control" id="passwordconf" name="passwordconf" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">How you heard of us</label>
+                        <div class="col-sm-6">
+                            <select id="howyouheard" name="howyouheard" class="form-control" required="">
+                                <option value=""></option>
+                                <option value="Friend or Colleague">Friend or Colleague</option>
+                                <option value="Magaline or Newspaper">Magaline or Newspaper</option>
+                                <option value="Online Advert">Online Advert</option>
+                                <option value="Online Search">Online Search</option>
+                                <option value="Radio">Radio</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Sponsorship">Sponsorship</option>
+                                <option value="Television">Television</option>
+                                <option value="[Other]">[Other]</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="personalNextBtn" class="btn btn-success btn-lg pull-right" type="submit">Next</button>
+                </form>
+            </div>
+            <div id="identificationtype" class="tab-pane" role="tabpanel">
+                <h2>Account Created</h2>
+                <p>Details will shortly emailed to the address you provided. Please keep the message, as you may want to look up your logon details lately.</p>
+                <form role="form" class="form-horizontal" id="frmIdentificationType">
+                    <h2>Select Identification Type</h2>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">I have an NZ driver license:</label>
+                        <label class="radio-inline">
+                            <input type="radio" value="option1" id="inlineRadio1" name="inlineRadioOptions"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions"> No
+                        </label>
+                    </div>
+                    <img width="304" height="236" alt="Driver License" class="img-rounded" src="img/driverlicense.jpg">
+                    <button class="btn btn-success btn-lg pull-right left-buffer" type="submit" id="btnIdentificationNext">Next</button>
+                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
+                </form>
+            </div>
+            <div id="identificationdetails" class="tab-pane" role="tabpanel">
+                <form role="form" class="form-horizontal" id="frmIdentificationDetails">
+                    <p>Please enter the exact details from your driver license, so we can verify your identity.</p>
+                    <p>If you dont hold an NZ driver license, please click 'Back' then select 'No'.</p>
+                    <h2>Driver License Details</h2>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="" id="focusedInput" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Middle Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="" id="focusedInput" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Family Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="" id="focusedInput" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-inline">
+                        <label class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-10">
+                            <select id="sel1" class="form-control"></select>
+                            <select id="sel1" class="form-control"></select>
+                            <select id="sel1" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="form-group top-buffer">
+                        <label class="col-sm-2 control-label">Driver License number</label>
+                        <div class="col-sm-10 top-buffer">
+                            <input type="text" value="" id="txtDriverLicenseNumber" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Card version number</label>
+                        <div class="col-sm-10 top-buffer">
+                            <input type="text" value="" id="txtDriverLicenseVersion" class="form-control">
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> I consent to the NZ Taxation.co.nz Limited disclosing my driver license information to Veda Advantage (NZ) Limited for the purpose of authentication.
+                        </label>
+                    </div>
+                    <h2>Sample New Zealand Driver License</h2>
+                    <img width="304" height="236" alt="Driver License" class="img-rounded" src="img/driverlicense.jpg">
+                    <button class="btn btn-success btn-lg pull-right left-buffer" type="submit">Next</button>
+                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
+                </form>
+            </div>
+            <div id="confirmation" class="tab-pane" role="tabpanel">
+                <form role="form" class="form-horizontal" id="frmConfirmation">
+                    <strong>Sorry, we are unable to verify your ID at this time.</strong>
+                    <p>You, can still complete refund applications, but we will not be able to process them or claim your refund from the IRD until we have verified your identification.</p>
+                    <p>We will email you the instructions on ways to verify your ID shortly.</p>
+                    <button class="btn btn-success btn-lg pull-right left-buffer" type="submit">Next</button>
+                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
+                </form>
+            </div>
+            <div id="authoritytoact" class="tab-pane" role="tabpanel">
+                <form role="form" class="form-horizontal">
+                    <h2>Authority to Act</h2>
+                    <h4>The Inland Revenue Department (IRD) requires your acknowledgement of the following.</h4>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited and its staff will have access to all your information held at the IRD, and be acting on your behalf.
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited will have access to change or modify any of this information during the execution of their work.
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited will link to all releveant tax types held by the IRD, to determine your tax position. This may include (but is not limited to) Income Tax, Family Support and Student Loan.
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited will receive all your correspondence from the IRD, and forward relevant correspondence to your electronically in the first instance. If you are actively managing certain tax types (eg Student Loan), then some correspondence may be sent directly to you.
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited will receive all your refunds from the IRD to their trust account. THese will be paid prior to the applicble fee (if any) being deducted. The net amount will be deposited to your nominated bank account, normally with 24 hours. Should you request a checque or have a non-current bank information, this can take longer.
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> NZTaxation.co.nz Limited will, wish the information supplied by yourself and the IRD, prepare and file all tax returns and tax applications for you. In cases an actual signature may be required, in which case NZTaxation.co.nz Limited will sign on your behalf.
+                            </label>
+                        </div>
+                        <div class="alert alert-success" role="alert" style="display:none;">We have received your application. We'll contact you shortly.</div>
+                        <button class="btn btn-success btn-lg pull-right" type="button" id="btnConfirm">Confirmation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /team -->
+<!-- spacer section:stats -->
+<section id="parallax1" class="section pad-top40 pad-bot40 mar-bot20" data-stellar-background-ratio="0.5">
+    <div class="container ">
+        <div class="align-center pad-top40 pad-bot40">
+            <h5>
+                As a certified e-file agent, we need you to create a password-protected account using your IRD number. This is part of our strict security and privacy guidelines.
+            </h5>
+            <br />
+            <a class="btn btn-primary" href="#team">Apply now!</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- contact -->
+<section id="section-contact" class="section appear clearfix">
+    <div class="container">
+
+        <div class="row mar-bot40">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+                    <p>@CurrentPage.GetPropertyValue("contactUsCaption")</p>
+                    <p><h3><i class="fa fa-phone">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("phone")</i></h3></p>
+                    <p><h2>@CurrentPage.GetPropertyValue("companyName")</h2></p>
+                    <p><h3><i class="fa fa-map-marker">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("address")</i></h3></p>
+                    <p><a href="mailto:nztaxation@gmail.com"><h3><i class="fa fa-envelope">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("email")</i></h3></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="cform" id="contact-form">
+                    <div id="sendmessage">
+                        Your message has been sent. Thank you!
+                    </div>
+                    <!--
+                    <form action="contact/contact.php" method="post" role="form" class="contactForm">
+                        <div class="wow bounceIn">
+                            <h2>Newsletter</h2>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="line-btn green">SEND MESSAGE</button>
+                    </form>
+                        -->
+                </div>
+            </div>
+            <!-- ./span12 -->
+        </div>
+
+    </div>
+</section>
+<!-- map -->
+<section id="section-map" class="clearfix">
+    <div id="map"></div>
+</section>
+
+
+@section Scripts {
+
+<script type="text/javascript">
+    $("#formpersonaldetailsid").submit(function () {
+        event.preventDefault();
+        $('#myTabs a[href="#identificationtype"]').tab('show');
+    });
+    $("#frmIdentificationType").submit(function () {
+        event.preventDefault();
+        $('#myTabs a[href="#identificationdetails"]').tab('show');
+    });
+    $("#frmIdentificationDetails").submit(function () {
+        event.preventDefault();
+        $('#myTabs a[href="#confirmation"]').tab('show');
+    });
+    $("#frmConfirmation").submit(function () {
+        event.preventDefault();
+        $('#myTabs a[href="#authoritytoact"]').tab('show');
+    });
+    
+
+    $("#btnConfirm").click(function () {
+        //if (!/^\s*$/.test($("#txtAddress").val())) {
+        //var link = $("#registerLink").attr("href");
+
+        var dataToSubmit = {
+            IRDNumber : $("#irdnumber").val(),
+            Title: $("#ptitle").val(),
+            FirstName: $("#firstname").val(),
+            MiddleName: $("#middlename").val(),
+            LastName: $("#lastname").val(), 
+            DateOfBirth: $("#bmonth").val() + "/" + $("#bday").val() + "/" + $("#byear").val(),
+            Email: $("#email").val(),
+            DayTimePhone: $("#daytimephone").val(),
+            MobilePhone: $("#mobile").val(),
+            Password: $("#ppassword").val(),
+            HowYouHeard: $("#howyouheard").val(),
+            HaveNZDriverLicense: $('#inlineRadio1').is(':checked'),
+            DriverLicenseNumber: $("#txtDriverLicenseNumber").val(),
+            CardVersion: $("#txtDriverLicenseVersion").val()            
+        };
+
+            $.ajax({
+                url: '/umbraco/surface/ApplicationForm/Submit',
+                data: dataToSubmit,
+                dataType: 'json',
+                method: 'POST',
+                success: function (result) {
+                    $(".alert-success").slideDown("slow");
+                    $("#btnConfirm").addClass("disabled");
+                },
+                error: function (xhr, error, errorThrown) {
+                }
+            });
+        //}
+    });
+
+</script>
+
+}

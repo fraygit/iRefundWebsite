@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+    function CustomSectionEditController($scope, $routeParams) {
+        $scope.content = { tabs: [{ id: 1, label: "List" }, { id: 2, label: "Tab 2" }] };
+
+        $scope.EditMode = function() {
+            return $routeParams.create == 'true';
+        };
+    }
+    </script>
+
+    <div ng-controller="CustomSectionEditController">
+
+        <umb-panel>
+            <umb-header tabs="content.tabs">
+                <div class="umb-headline-editor-wrapper span12 ng-scope">
+                    <h1 class="ng-binding">iRefund Application Forms {{id}}</h1>
+                </div>
+            </umb-header>
+
+            <umb-tab-view>
+                <umb-tab id="tab1" rel="svensson">
+
+                    <div class="umb-pane">
+                        This is tab content for tab 1<br />
+                        <table class="table" id="MyTable">
+                            <tr>
+                                <td>IRD</td>
+                                <td>First Name</td>
+                            </tr>
+                        </table>
+
+                        <p ng-show="EditMode()">
+                            <span class="label label-warning">In create mode, this label is only showed when the controller sees the create-querystring item.</span>
+                        </p>
+                    </div>
+                </umb-tab>
+
+                <umb-tab id="tab2" rel="kalle">
+
+                    <div class="umb-pane">
+
+                        This is tab content for tab 2
+
+
+                    </div>
+                </umb-tab>
+
+            </umb-tab-view>
+        </umb-panel>
+
+    </div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    //$.ajax({
+    //    url: 'surface/ApplicationForm/List',
+    //    data: {},
+    //    dataType: 'json',
+    //    method: 'GET',
+    //    success: function (result) {
+    //        var irefund = JSON.parse(result);
+            
+    //        $.each(irefund, function (index, item) {
+    //            $("#MyTable tr:last").after('<tr><td>' + item.IRDNumber + '</td><td>' + item.FirstName + '<td></tr>');
+    //            //alert(item.IRDNumber);
+    //        });
+    //        var r = result;
+    //    },
+    //    error: function (xhr, error, errorThrown) {
+    //    }
+    //});
+
+</script>
