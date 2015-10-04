@@ -5,12 +5,99 @@
 
 @*@CurrentPage.GetGridHtml("content", "fanoe")*@
 
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active" style="background-image: url(/img/a1.jpg)">
+                <div class="container">
+                    <div class="row slide-margin">
+                        <div class="col-sm-6">
+                            <div class="carousel-content">
+                                <h2 class="animation animated-item-1" style="text-transform:none">Welcome to <span>iRefund</span></h2>
+                                <p class="animation animated-item-2">@CurrentPage.GetPropertyValue("carouseltitle")</p>
+                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        @*<div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="slider-img">
+                                <img src="/assets/images/slider/img3.png" class="img-responsive">
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.carousel-inner-->
+    </div><!--/.carousel-->
+</section><!--/#main-slider-->
+<a name="howitworks"></a>
+<div class="feature">
+    <div class="container">
+        <div class="text-center">
+            <div class="col-md-3 col-md-offset-2">
+                <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <i class="fa fa-book"></i>
+                    <h2>Step 1</h2>
+                    <p>@CurrentPage.GetPropertyValue("stepOne")</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <i class="fa fa-heart-o"></i>
+                    <h2>Step 2</h2>
+                    <p>@CurrentPage.GetPropertyValue("stepTwo")</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
+                    <i class="fa fa-cloud"></i>
+                    <h2>Step 3</h2>
+                    <p>@CurrentPage.GetPropertyValue("stepThree")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a name="aboutus"></a>
+<div class="about">
+    
+    <div class="container">
+        <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            @Html.Raw(CurrentPage.GetPropertyValue("aboutColumn1"))
+        </div>
+
+        <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            @Html.Raw(CurrentPage.GetPropertyValue("about"))
+        </div>
+    </div>
+</div>
+
+
+<section id="">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    @*<div class="pull-left">
+                        <i class="fa fa-phone"></i>
+                    </div>*@
+                    <div class="media-body">
+                        @Html.Raw(CurrentPage.GetPropertyValue("contactColumn1"))
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="800ms">
+                    @Html.Raw(CurrentPage.GetPropertyValue("contactColumn2"))
+                </div>
+            </div>
+        </div>
+    </div><!--/.container-->
+</section><!--/#conatcat-info-->
 
 
 
-
-
-<section class="featured">
+@*<section class="featured">
     <div id="index">
         <!-- Responsive slider - START -->
         <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
@@ -18,7 +105,7 @@
                 <ul>
                     <li>
                         <div class="slide-body" data-group="slide">
-                            <img src="img/1.jpg" alt="">
+                            <img src="img/a1.jpg" alt="">
                             <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
                                 <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
                                 <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>@CurrentPage.GetPropertyValue("subtitle")</h3></div>
@@ -28,7 +115,7 @@
                     </li>
                     <li>
                         <div class="slide-body" data-group="slide">
-                            <img src="img/2.jpg" alt="">
+                            <img src="img/a2.jpg" alt="">
                             <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
                                 <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
                                 <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>@CurrentPage.GetPropertyValue("subtitle")</h3></div>
@@ -38,7 +125,7 @@
                     </li>
                     <li>
                         <div class="slide-body" data-group="slide">
-                            <img src="img/6.jpg" alt="">
+                            <img src="img/a3.jpg" alt="">
                             <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
                                 <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
                                     <h2>@CurrentPage.GetPropertyValue("carouseltitle")</h2>
@@ -146,7 +233,7 @@
                     <div class="wow bounceIn" data-animation-delay="7.8s">
 
                         <h2 class="section-heading animated">How it works</h2>
-                        <h4>@CurrentPage.GetPropertyValue("howItWorksCaption")</h4>
+                        <h4>@CurrentPage.GetPropertyValue("howItWorksCaptio")</h4>
 
                     </div>
                 </div>
@@ -537,7 +624,6 @@
                     </div>
                     <img width="304" height="236" alt="Driver License" class="img-rounded" src="img/driverlicense.jpg">
                     <button class="btn btn-success btn-lg pull-right left-buffer" type="submit" id="btnIdentificationNext">Next</button>
-                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
                 </form>
             </div>
             <div id="identificationdetails" class="tab-pane" role="tabpanel">
@@ -591,7 +677,6 @@
                     <h2>Sample New Zealand Driver License</h2>
                     <img width="304" height="236" alt="Driver License" class="img-rounded" src="img/driverlicense.jpg">
                     <button class="btn btn-success btn-lg pull-right left-buffer" type="submit">Next</button>
-                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
                 </form>
             </div>
             <div id="confirmation" class="tab-pane" role="tabpanel">
@@ -600,7 +685,6 @@
                     <p>You, can still complete refund applications, but we will not be able to process them or claim your refund from the IRD until we have verified your identification.</p>
                     <p>We will email you the instructions on ways to verify your ID shortly.</p>
                     <button class="btn btn-success btn-lg pull-right left-buffer" type="submit">Next</button>
-                    @*<button class="btn btn-success btn-lg pull-right" type="submit">Previous</button>*@
                 </form>
             </div>
             <div id="authoritytoact" class="tab-pane" role="tabpanel">
@@ -651,7 +735,7 @@
 <section id="parallax1" class="section pad-top40 pad-bot40 mar-bot20" data-stellar-background-ratio="0.5">
     <div class="container ">
         <div class="align-center pad-top40 pad-bot40">
-            <h5>
+            <h5 style="color:white;">
                 As a certified e-file agent, we need you to create a password-protected account using your IRD number. This is part of our strict security and privacy guidelines.
             </h5>
             <br />
@@ -673,7 +757,7 @@
                     <p><h3><i class="fa fa-phone">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("phone")</i></h3></p>
                     <p><h2>@CurrentPage.GetPropertyValue("companyName")</h2></p>
                     <p><h3><i class="fa fa-map-marker">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("address")</i></h3></p>
-                    <p><a href="mailto:nztaxation@gmail.com"><h3><i class="fa fa-envelope">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("email")</i></h3></a></p>
+                    <p><a href="mailto:@CurrentPage.GetPropertyValue("email")"><h3><i class="fa fa-envelope">&nbsp;&nbsp;@CurrentPage.GetPropertyValue("email")</i></h3></a></p>
                 </div>
             </div>
         </div>
@@ -783,4 +867,4 @@
 
 </script>
 
-}
+}*@

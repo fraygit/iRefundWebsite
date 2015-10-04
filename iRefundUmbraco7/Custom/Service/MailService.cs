@@ -12,7 +12,7 @@ namespace iRefundUmbraco7.Custom.Service
 {
     public class MailService
     {
-        public void Send(string to, string templatePath, string username, RefundApplication refundApplication)
+        public void Send(string to, string templatePath, string username, RefundApplication refundApplication, string smtpServer, string smtpUsername, string smtpPassword, string fromEmail)
         {
             MailMessage mail = new MailMessage();
             SmtpClient client = new SmtpClient();
@@ -20,18 +20,18 @@ namespace iRefundUmbraco7.Custom.Service
             client.EnableSsl = true;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            client.Host = "email-smtp.us-east-1.amazonaws.com";
+            client.Host = smtpServer;
 
             //mail.To.Add(new MailAddress(to));
             
             mail.To.Add(new MailAddress(to));
-            mail.From = new MailAddress("francis.yanga@gmail.com");
+            mail.From = new MailAddress(fromEmail);
             mail.Subject = "iRefund Application";
             mail.IsBodyHtml = true;
             var param = new string[] { refundApplication.IRDNumber, refundApplication.Title, refundApplication.FirstName, refundApplication.MiddleName, refundApplication.LastName, refundApplication.DateOfBirth, refundApplication.Email, refundApplication.DayTimePhone, refundApplication.MobilePhone, refundApplication.HowYouHeard, refundApplication.HaveNZDriverLicense, refundApplication.DriverLicenseNumber, refundApplication.CardVersion };
             mail.Body = GetMessage(param, templatePath);
             client.UseDefaultCredentials = true;
-            client.Credentials = new NetworkCredential("AKIAIROLINP45YCSEZXQ", "Agz+P17KklLc9e8RlH3/dWWyZjp5StsYzOOeYQoZZsG/");
+            client.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
             var userToken = "something";
             client.Send(mail);
         }

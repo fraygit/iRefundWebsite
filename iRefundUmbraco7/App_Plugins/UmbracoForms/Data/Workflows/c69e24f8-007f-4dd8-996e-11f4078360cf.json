@@ -1,0 +1,15 @@
+{
+  "id": "c69e24f8-007f-4dd8-996e-11f4078360cf",
+  "name": "Send Email to client",
+  "form": "b5c66996-2939-4256-a17e-5536a78274b4",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "{emailaddress}",
+    "SenderEmail": "francis.yanga@gmail.com",
+    "Subject": "Your application for tax refund",
+    "Message": "We have receive your application.\n\nYour details:"
+  },
+  "sortOrder": 0
+}

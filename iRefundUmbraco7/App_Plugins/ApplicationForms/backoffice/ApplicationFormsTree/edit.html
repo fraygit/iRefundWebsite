@@ -7,10 +7,37 @@
 
     <script>
 
-    function CustomSectionEditController($scope, $routeParams) {
+    function CustomSectionEditController($scope, $routeParams, $http) {
         $scope.content = { tabs: [{ id: 1, label: "List" }, { id: 2, label: "Tab 2" }] };
 
-        $scope.EditMode = function() {
+        $http({
+            method: 'GET',
+            url: 'surface/ApplicationForm/List'
+        }).then(function successCallback(response) {
+            console.log(JSON.parse(response.data));
+            $scope.refundapplications = JSON.parse(response.data);
+            // this callback will be called asynchronously
+            // when the response is available
+        }, function errorCallback(response) {
+            console.log('error');
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
+
+        $scope.EditMode = function () {
+            console.log('yo');
+            //$http({
+            //    method: 'GET',
+            //    url: 'surface/ApplicationForm/List'
+            //}).then(function successCallback(response) {
+            //    console.log(response);
+            //    // this callback will be called asynchronously
+            //    // when the response is available
+            //}, function errorCallback(response) {
+            //    console.log('error');
+            //    // called asynchronously if an error occurs
+            //    // or server returns response with an error status.
+            //});
             return $routeParams.create == 'true';
         };
     }
@@ -30,10 +57,14 @@
 
                     <div class="umb-pane">
                         This is tab content for tab 1<br />
-                        <table class="table" id="MyTable">
+                        <table class="table" id="MyTable" ng-repeat="refundapplication in refundapplications track by $index">
                             <tr>
                                 <td>IRD</td>
                                 <td>First Name</td>
+                            </tr>
+                            <tr ng-repeat="item in refundapplication track by item.Id">
+                                <td>{{IRDNumber}}</td>
+                                <td>{{FirstName}}</td>
                             </tr>
                         </table>
 

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>Kenny.Umbraco.DataTypes.ImageCropper.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Kenny.Umbraco.DataTypes.ImageCropper.dll</orgName>
+    </file>
+    <file>
+      <guid>Jcrop.gif</guid>
+      <orgPath>/media</orgPath>
+      <orgName>Jcrop.gif</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Image Cropper</name>
+      <version>0.95</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>http://kenny.no/downloads/image_cropper_0.95.zip</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Kenneth Solberg</name>
+      <website>http://kenny.no/</website>
+    </author>
+    <readme><![CDATA[A datatype that lets you crop images. Available crops are configured in the datatype prevalue editor. The datatype can be used on both Media and Content nodes and stores data in plain XML format. You can also configure it to create physical crops for you. The cropping UI is based on jCrop from Deep Liquid. See it in action at http://kenny.no/.]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes>
+    <DataType Name="Image Cropper" Id="327fac05-b17a-44f1-aa4a-389c5942126e" Definition="8fa4a9b2-c48f-43c6-8444-3ab31f018ca8">
+      <PreValues>
+        <PreValue Id="85" Value="umbracoFile,1,1|" />
+      </PreValues>
+    </DataType>
+  </DataTypes>
+</umbPackage>

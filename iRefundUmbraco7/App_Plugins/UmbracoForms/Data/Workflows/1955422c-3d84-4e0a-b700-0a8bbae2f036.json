@@ -1,0 +1,15 @@
+{
+  "id": "1955422c-3d84-4e0a-b700-0a8bbae2f036",
+  "name": "Send email to admin when submitted",
+  "form": "b5c66996-2939-4256-a17e-5536a78274b4",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "francis.yanga@gmail.com",
+    "SenderEmail": "francis.yanga@gmail.com",
+    "Subject": "the form Apply For Refund was submitted",
+    "Message": "the form Apply For Refund was submitted, this is the list of values it contained, you can turn this email off under workflows in Umbraco Contour"
+  },
+  "sortOrder": 0
+}

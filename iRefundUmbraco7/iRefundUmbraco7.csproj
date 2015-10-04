@@ -193,6 +193,10 @@
     <Reference Include="umbraco.editorControls">
       <HintPath>..\packages\UmbracoCms.Core.7.2.8\lib\umbraco.editorControls.dll</HintPath>
     </Reference>
+    <Reference Include="Umbraco.Forms.Core, Version=4.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Umbraco.Forms.Core.dll</HintPath>
+    </Reference>
     <Reference Include="umbraco.MacroEngines">
       <HintPath>..\packages\UmbracoCms.Core.7.2.8\lib\umbraco.MacroEngines.dll</HintPath>
     </Reference>
@@ -211,9 +215,131 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\ApplicationForms\backoffice\ApplicationFormsTree\edit.html" />
+    <Content Include="App_Plugins\ApplicationForms\backoffice\ApplicationFormsTree\editController.js" />
     <Content Include="App_Plugins\Grid\Config\FanoeConfig.txt" />
     <Content Include="App_Plugins\Grid\Editors\Views\media_with_description.html" />
     <Content Include="App_Plugins\Grid\Editors\Views\quote_with_description.html" />
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\bootstrap-theme.css" />
+    <Content Include="assets\css\bootstrap-theme.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\prettyPhoto.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\2.jpg" />
+    <Content Include="assets\images\3.jpg" />
+    <Content Include="assets\images\4.jpg" />
+    <Content Include="assets\images\5.jpg" />
+    <Content Include="assets\images\6.jpg" />
+    <Content Include="assets\images\7.jpg" />
+    <Content Include="assets\images\blog\avatar.jpg" />
+    <Content Include="assets\images\blog\avatar1.png" />
+    <Content Include="assets\images\blog\avatar2.png" />
+    <Content Include="assets\images\blog\avatar3.png" />
+    <Content Include="assets\images\blog\blog1.jpg" />
+    <Content Include="assets\images\blog\blog2.jpg" />
+    <Content Include="assets\images\blog\boy.png" />
+    <Content Include="assets\images\blog\boy2.png" />
+    <Content Include="assets\images\blog\boy3.png" />
+    <Content Include="assets\images\blog\comments_bg.png" />
+    <Content Include="assets\images\blog\gallery1.png" />
+    <Content Include="assets\images\blog\gallery2.png" />
+    <Content Include="assets\images\blog\gallery3.png" />
+    <Content Include="assets\images\blog\gallery4.png" />
+    <Content Include="assets\images\blog\gallery5.png" />
+    <Content Include="assets\images\blog\gallery6.png" />
+    <Content Include="assets\images\blog\girl.png" />
+    <Content Include="assets\images\blog\thumb1.jpg" />
+    <Content Include="assets\images\blog\thumb2.jpg" />
+    <Content Include="assets\images\blog\thumb3.jpg" />
+    <Content Include="assets\images\contact.png" />
+    <Content Include="assets\images\partners\partner1.png" />
+    <Content Include="assets\images\partners\partner2.png" />
+    <Content Include="assets\images\partners\partner3.png" />
+    <Content Include="assets\images\partners\partner4.png" />
+    <Content Include="assets\images\partners\partner5.png" />
+    <Content Include="assets\images\partners\partner_bg.png" />
+    <Content Include="assets\images\portfolio\full\item1.png" />
+    <Content Include="assets\images\portfolio\full\item10.png" />
+    <Content Include="assets\images\portfolio\full\item11.png" />
+    <Content Include="assets\images\portfolio\full\item12.png" />
+    <Content Include="assets\images\portfolio\full\item2.png" />
+    <Content Include="assets\images\portfolio\full\item3.png" />
+    <Content Include="assets\images\portfolio\full\item4.png" />
+    <Content Include="assets\images\portfolio\full\item5.png" />
+    <Content Include="assets\images\portfolio\full\item6.png" />
+    <Content Include="assets\images\portfolio\full\item7.png" />
+    <Content Include="assets\images\portfolio\full\item8.png" />
+    <Content Include="assets\images\portfolio\full\item9.png" />
+    <Content Include="assets\images\portfolio\recent\item1.png" />
+    <Content Include="assets\images\portfolio\recent\item10.png" />
+    <Content Include="assets\images\portfolio\recent\item11.png" />
+    <Content Include="assets\images\portfolio\recent\item12.png" />
+    <Content Include="assets\images\portfolio\recent\item2.png" />
+    <Content Include="assets\images\portfolio\recent\item3.png" />
+    <Content Include="assets\images\portfolio\recent\item4.png" />
+    <Content Include="assets\images\portfolio\recent\item5.png" />
+    <Content Include="assets\images\portfolio\recent\item6.png" />
+    <Content Include="assets\images\portfolio\recent\item7.png" />
+    <Content Include="assets\images\portfolio\recent\item8.png" />
+    <Content Include="assets\images\portfolio\recent\item9.png" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="assets\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="assets\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="assets\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="assets\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="assets\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="assets\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="assets\images\prettyPhoto\default\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\default\sprite.png" />
+    <Content Include="assets\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="assets\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="assets\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="assets\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="assets\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="assets\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="assets\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="assets\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="assets\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="assets\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="assets\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="assets\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="assets\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="assets\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="assets\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="assets\images\services\1.jpg" />
+    <Content Include="assets\images\services\2.jpg" />
+    <Content Include="assets\images\services\3.jpg" />
+    <Content Include="assets\images\slider\bg1.jpg" />
+    <Content Include="assets\images\slider\img3.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\functions.js" />
+    <Content Include="assets\js\html5shiv.js" />
+    <Content Include="assets\js\jquery-2.1.1.min.js" />
+    <Content Include="assets\js\jquery.isotope.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.prettyPhoto.js" />
+    <Content Include="assets\js\wow.min.js" />
     <Content Include="css\animate.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap-theme.css" />
@@ -297,6 +423,34 @@
     <Content Include="App_Plugins\Grid\Editors\Render\quote_with_description.cshtml" />
     <Content Include="Views\ApplicationFrom\Index.cshtml" />
     <Content Include="Views\ApplicationFrom\List.cshtml" />
+    <Content Include="Views\ApplyForRefund.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Partials\Forms\Export\csv.cshtml" />
+    <Content Include="Views\Partials\Forms\Export\html.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.CheckBox.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.CheckBoxList.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.DatePicker.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.DropDownList.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.FileUpload.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.HiddenField.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.PasswordField.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.RadioButtonList.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\Fieldtype.Recaptcha.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.Text.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.Textarea.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.Textfield.cshtml" />
+    <Content Include="Views\Partials\Forms\Form.cshtml" />
+    <Content Include="Views\Partials\Forms\Script.cshtml" />
+    <Content Include="assets\css\bootstrap-theme.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -324,9 +478,11 @@
     <Compile Include="Custom\Section\ApplicationFormSection.cs" />
     <Compile Include="Custom\Service\MailService.cs" />
     <Compile Include="Custom\SurfaceControllers\ApplicationFormController.cs" />
+    <Compile Include="Custom\Workflow\WorkflowSendMongoDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="css2\" />
     <Folder Include="Custom\EmailTemplate\" />
   </ItemGroup>
   <PropertyGroup>

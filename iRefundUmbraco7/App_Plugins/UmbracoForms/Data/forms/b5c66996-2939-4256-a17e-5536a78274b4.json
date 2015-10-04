@@ -1,0 +1,555 @@
+{
+  "name": "Apply For Refund",
+  "created": "2015-10-03T08:13:14.2862962+13:00",
+  "pages": [
+    {
+      "fieldSets": [
+        {
+          "caption": null,
+          "sortOrder": 0,
+          "id": "c241345a-e412-4617-95b2-7a04bb91fdcb",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": "",
+              "width": 6,
+              "fields": [
+                {
+                  "caption": "IRD Number",
+                  "tooltip": "This is your tax id",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "irdNumber",
+                  "id": "4b2bf0b9-46f7-4b98-b7d4-a86f29c71c93",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Title",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "title",
+                  "id": "5bc29a27-020b-4325-8258-85559dff4537",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "MR",
+                    "MRS"
+                  ]
+                },
+                {
+                  "caption": "First Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "firstName",
+                  "id": "1102e7c3-8887-4a62-8014-bc96578f7e81",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Middle Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "middleName",
+                  "id": "fb1e6bd0-ffe9-42c2-cee2-0c8a44729d20",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Last Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "lastName",
+                  "id": "776b9d70-a581-47ba-ae2e-32f85eab8b6a",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Date of Birth",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "dateOfBirth",
+                  "id": "62b00da2-211e-45d9-bd46-d49efe3718d5",
+                  "fieldTypeId": "f8b4c3b8-af28-11de-9dd8-ef5956d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {},
+                  "preValues": []
+                },
+                {
+                  "caption": "Email Address",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "emailAddress",
+                  "id": "dfc986b0-8547-4a92-b10a-0d638d0bf882",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Day time phone",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "dayTimePhone",
+                  "id": "c2901d19-2b84-4e55-9c10-41152983a8dc",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Mobile phone",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "mobilePhone",
+                  "id": "f0e68921-8fbf-4809-c7bc-050bb313c3d1",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "How have you heard of us",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "howHaveYouHeardOfUs",
+                  "id": "e470cf04-705b-4357-e468-9539b6ab8200",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Friends or Colleague",
+                    "Magazine of newspaper",
+                    "Online Advert"
+                  ]
+                }
+              ]
+            },
+            {
+              "caption": null,
+              "width": 6,
+              "fields": [
+                {
+                  "caption": "I have a driver's License",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "iHaveADriverSLicense",
+                  "id": "cf48882b-6d25-4cc5-8648-e038f2cd1f0d",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": "Please select type of identification",
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": "Yes"
+                  },
+                  "preValues": [
+                    "Yes",
+                    "No"
+                  ]
+                },
+                {
+                  "caption": "Text field",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "textField",
+                  "id": "ed46ed35-f001-410e-dc8c-7251cf10893b",
+                  "fieldTypeId": "e3fbf6c4-f46c-495e-aff8-4b3c227b4a98",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": true,
+                    "actionType": "Hide",
+                    "logicType": "All",
+                    "rules": [
+                      {
+                        "id": "00000000-0000-0000-0000-000000000000",
+                        "field": "cf48882b-6d25-4cc5-8648-e038f2cd1f0d",
+                        "operator": "IsNot",
+                        "value": "No"
+                      }
+                    ]
+                  },
+                  "settings": {
+                    "Caption": "Other types of acceptable Identification:",
+                    "BodyText": "1. Passport<br/>\n\n2. Firearm License"
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Driver License First Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "driverLicenseFirstName",
+                  "id": "ddcc98d7-05b3-421c-fd71-fddafe24abc4",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Driver License Last Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "driverLicenseLastName",
+                  "id": "6144efca-c05c-4d04-ca46-b7e056405a77",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Driver License Number",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "driverLicenseNumber",
+                  "id": "45a42ff3-52e8-4bde-8abc-ec5e2f0550a7",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Card Version Number",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "cardVersionNumber",
+                  "id": "415282ab-0213-4ef5-c99c-5ada4dd70b27",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "I consent to the NZ Taxation.co.nz Limited disclosing my driver license information to Veda Advantage (NZ) Limited for the purpose of authentication.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "iConsentToTheNZTaxationCoNzLimitedDisclosingMyDriverLicenseInformationToVedaAdvantageNZLimitedForThePurposeOfAuthentication",
+                  "id": "6de57b70-3494-451a-8973-97beebc8fb2c",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        },
+        {
+          "caption": "",
+          "sortOrder": 0,
+          "id": "7dcb716f-f633-4242-a476-4a97874acb58",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": "",
+              "width": 12,
+              "fields": [
+                {
+                  "caption": "NZTaxation.co.nz Limited and its staff will have access to all your information held at the IRD, and be acting on your behalf.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedAndItsStaffWillHaveAccessToAllYourInformationHeldAtTheIrdAndBeActingOnYourBehalf",
+                  "id": "b047c0df-05aa-4199-ff67-6dfe914bbb65",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": "Please confirm the statement above by ticking the checkbox.",
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "NZTaxation.co.nz Limited will have access to change or modify any of this information during the execution of their work.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedWillHaveAccessToChangeOrModifyAnyOfThisInformationDuringTheExecutionOfTheirWork",
+                  "id": "bdaddc54-be23-4ec3-a7fb-16d2878acca5",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": "Please confirm the statement above by ticking the checkbox.",
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "NZTaxation.co.nz Limited will link to all releveant tax types held by the IRD, to determine your tax position. This may include (but is not limited to) Income Tax, Family Support and Student Loan.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedWillLinkToAllReleveantTaxTypesHeldByTheIrdToDetermineYourTaxPositionThisMayIncludeButIsNotLimitedToIncomeTaxFamilySupportAndStudentLoan",
+                  "id": "6521d991-ddca-46be-9c26-1fb66a324bb0",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "NZTaxation.co.nz Limited will receive all your correspondence from the IRD, and forward relevant correspondence to your electronically in the first instance. If you are actively managing certain tax types (eg Student Loan), then some correspondence may be sent directly to you.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedWillReceiveAllYourCorrespondenceFromTheIrdAndForwardRelevantCorrespondenceToYourElectronicallyInTheFirstInstanceIfYouAreActivelyManagingCertainTaxTypesEgStudentLoanThenSomeCorrespondenceMayBeSentDirectlyToYou",
+                  "id": "bee3cb8f-ee14-4441-b594-23e88c345495",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "NZTaxation.co.nz Limited will receive all your refunds from the IRD to their trust account. THese will be paid prior to the applicble fee (if any) being deducted. The net amount will be deposited to your nominated bank account, normally with 24 hours. Should you request a checque or have a non-current bank information, this can take longer.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedWillReceiveAllYourRefundsFromTheIrdToTheirTrustAccountTheseWillBePaidPriorToTheApplicbleFeeIfAnyBeingDeductedTheNetAmountWillBeDepositedToYourNominatedBankAccountNormallyWith24HoursShouldYouRequestAChecqueOrHaveANonCurrentBankInformat",
+                  "id": "ea874913-b7b8-40a3-fa10-be75da3c3b24",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "NZTaxation.co.nz Limited will, wish the information supplied by yourself and the IRD, prepare and file all tax returns and tax applications for you. In cases an actual signature may be required, in which case NZTaxation.co.nz Limited will sign on your behalf.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "nztaxationCoNzLimitedWillWishTheInformationSuppliedByYourselfAndTheIrdPrepareAndFileAllTaxReturnsAndTaxApplicationsForYouInCasesAnActualSignatureMayBeRequiredInWhichCaseNztaxationCoNzLimitedWillSignOnYourBehalf",
+                  "id": "4a594830-a3b6-4a25-f592-5584eb363729",
+                  "fieldTypeId": "d5c0c390-ae9a-11de-a69e-666455d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        }
+      ],
+      "caption": "Application for a refund",
+      "sortOrder": 0,
+      "id": "00000000-0000-0000-0000-000000000000",
+      "form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "id": "b5c66996-2939-4256-a17e-5536a78274b4",
+  "fieldIndicationType": "MarkMandatoryFields",
+  "indicator": "*",
+  "showValidationSummary": false,
+  "hideFieldValidation": false,
+  "requiredErrorMessage": "Please provide a value for {0}",
+  "invalidErrorMessage": "Please provide a valid value for {0}",
+  "messageOnSubmit": "Details will shortly emailed to the address you provided. Please keep the message, as you may want to look up your logon details lately.",
+  "goToPageOnSubmit": 0,
+  "xPathOnSubmit": null,
+  "manualApproval": true,
+  "storeRecordsLocally": true,
+  "cssClass": null,
+  "disableDefaultStylesheet": false,
+  "useClientDependency": false,
+  "workflows": [
+    "1955422c-3d84-4e0a-b700-0a8bbae2f036",
+    "c69e24f8-007f-4dd8-996e-11f4078360cf"
+  ],
+  "datasource": null,
+  "submitLabel": "Submit",
+  "nextLabel": "Next",
+  "prevLabel": "Previous"
+}

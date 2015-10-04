@@ -1,0 +1,14 @@
+{
+  "id": "d5ffdca6-f54c-4825-ac20-384cdb46e74a",
+  "name": "Send email to admin@irefund.co.nz when submitted",
+  "form": "fa7fd2c4-4c21-44e9-af5c-1d2236559fde",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "admin@irefund.co.nz",
+    "Subject": "the form  was submitted",
+    "Message": "the form  was submitted, this is the list of values it contained, you can turn this email off under workflows in Umbraco Contour"
+  },
+  "sortOrder": 0
+}
