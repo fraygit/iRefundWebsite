@@ -1,0 +1,10 @@
+{
+  "id": "69058d41-ca2b-44cf-ba6c-aa6db26f2233",
+  "name": "Update MongoDB",
+  "form": "b5c66996-2939-4256-a17e-5536a78274b4",
+  "active": true,
+  "workflowTypeId": "7677964a-4ad9-4a0c-84e5-b6ceb9aad6fd",
+  "executesOn": "Submitted",
+  "settings": {},
+  "sortOrder": 0
+}

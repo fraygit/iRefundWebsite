@@ -14,8 +14,9 @@
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h2 class="animation animated-item-1" style="text-transform:none">Welcome to <span>iRefund</span></h2>
-                                <p class="animation animated-item-2">@CurrentPage.GetPropertyValue("carouseltitle")</p>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                @*<p class="animation animated-item-2">@Html.Raw(CurrentPage.GetPropertyValue("carouseltitle"))</p>*@
+                                @Html.Raw(CurrentPage.GetPropertyValue("carouseltitle"))
+                                <a class="btn-slide animation animated-item-3" href="/apply-for-a-refund">Apply now</a>
                             </div>
                         </div>
 
@@ -34,23 +35,26 @@
 <div class="feature">
     <div class="container">
         <div class="text-center">
+			<h1 style="color:black;">@CurrentPage.GetPropertyValue("howItWorksCaption")</h1>
             <div class="col-md-3 col-md-offset-2">
+				
+				
                 <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-laptop"></i>
                     <h2>Step 1</h2>
                     <p>@CurrentPage.GetPropertyValue("stepOne")</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-                    <i class="fa fa-heart-o"></i>
+                    <i class="fa fa-calculator"></i>
                     <h2>Step 2</h2>
                     <p>@CurrentPage.GetPropertyValue("stepTwo")</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
-                    <i class="fa fa-cloud"></i>
+                    &nbsp;&nbsp;<i class="fa fa-usd"></i>&nbsp;&nbsp;
                     <h2>Step 3</h2>
                     <p>@CurrentPage.GetPropertyValue("stepThree")</p>
                 </div>
@@ -95,6 +99,31 @@
     </div><!--/.container-->
 </section><!--/#conatcat-info-->
 
+@section footer{
+    @{
+        var home = Umbraco.Content(1073);
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("facebook")))
+        {
+            <li><a href="@home.GetPropertyValue("facebook")" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("twitter")))
+        {
+            <li><a href="@home.GetPropertyValue("twitter")" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("googlePlus")))
+        {
+            <li><a href="@home.GetPropertyValue("googlePlus")" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("linkedin")))
+        {
+            <li><a href="@home.GetPropertyValue("linkedin")" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("googlePlus")))
+        {
+            <li><a href="@home.GetPropertyValue("googlePlus")" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+        }    
+    }
+}
 
 
 @*<section class="featured">

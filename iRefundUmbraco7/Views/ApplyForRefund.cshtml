@@ -8,6 +8,7 @@
     <div class="container">
         <div class="col-md-12 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-duration: 1000ms; -moz-animation-duration: 1000ms; animation-duration: 1000ms;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
             <h1>&nbsp;</h1>
+            
             @Html.Raw(CurrentPage.GetPropertyValue("body"))
         </div>
     </div>
@@ -17,11 +18,24 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>*@
                 <h4 class="modal-title">iRefund - Login/Registration</h4>
             </div>
             <div class="modal-body">
-                <div class="row">
+                <div class="alert alert-danger" role="alert" style="display:none;"></div>
+                <div class="alert alert-success" role="alert" style="display:none;"></div>
+                
+                <div class="row forgotDiv" style="display:none;">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="text" class="form-control" id="txtEmail" placeholder="Emaill Address">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" id="btnRecoverPassword">Recover Password</button>
+                    </div>
+                </div>
+
+                <div class="row loginModal">
                     <div class="col-md-5">
                         <h3>Login</h3>
                         <form>
@@ -34,6 +48,8 @@
                                 <input type="password" class="form-control" id="txtPassword" placeholder="Password">
                             </div>
                             <button type="button" class="btn btn-primary btn-block" id="btnLogin">Login</button>
+                            <br />
+                            <a href="#" id="lnkForgot">Forgot password</a>
                         </form>
                     </div>
                     <div class="col-md-2">
@@ -63,28 +79,127 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+								
+@section footer{
+    @{
+        var home = Umbraco.Content(1073);
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("facebook")))
+        {
+            <li><a href="@home.GetPropertyValue("facebook")" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("twitter")))
+        {
+            <li><a href="@home.GetPropertyValue("twitter")" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("googlePlus")))
+        {
+            <li><a href="@home.GetPropertyValue("googlePlus")" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("linkedin")))
+        {
+            <li><a href="@home.GetPropertyValue("linkedin")" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        }    
+		if (!string.IsNullOrEmpty(home.GetPropertyValue("googlePlus")))
+        {
+            <li><a href="@home.GetPropertyValue("googlePlus")" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+        }    
+    }
+}								
 
 @section scripts {
     <script type="text/javascript">
-        
-        if ($(".contourMessageOnSubmit").length == 0 && $(".field-validation-error").length == 0) {
-            $('#myModal').modal({
-                backdrop: 'static',
-                keyboard: false
+
+        $("#lnkForgot").click(function () {
+            $(".loginModal").hide();
+            $(".forgotDiv").show();
+        });
+
+        $("#btnRecoverPassword").click(function () {
+            $.ajax({
+                url: '/umbraco/surface/Account/ForgotPassword',
+                data: {email: $("#txtEmail").val()},
+                dataType: 'json',
+                method: 'POST',
+                success: function (result) {
+                    $(".alert-success").html("Password has been sent your email.");
+                    $(".alert-success").slideDown("slow");
+                },
+                error: function (xhr, error, errorThrown) {
+                }
             });
-            $('#myModal').modal('show');
+        });
+
+        if ($(".contourMessageOnSubmit").length == 0 && $(".field-validation-error").length == 0) {
+
+            $.ajax({
+                url: '/umbraco/surface/Account/CheckSession',
+                data: { },
+                dataType: 'json',
+                method: 'GET',
+                success: function (result) {
+                    $($(".irdnumber").find("input")).val(result.irdNumber);
+                    $($(".firstname").find("input")).val(result.firstName);
+                    $($(".lastname").find("input")).val(result.lastName);
+                    $($(".emailaddress").find("input")).val(result.email);
+                    $('#myModal').modal('hide');
+                    $("#logout").show();
+                },
+                error: function (xhr, error, errorThrown) {
+                    $('#myModal').modal({
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                    $('#myModal').modal('show');
+                }
+            });
         }
 
         $("#btnSignup").click(function () {
             if (!(/^\s*$/).test($("#txtIrdSign").val()) && !(/^\s*$/).test($("#txtIrdPassSign1").val()) && !(/^\s*$/).test($("#txtIrdPassSign2").val())) {
-                $('#myModal').modal('hide');
+                $.ajax({
+                    url: '/umbraco/surface/Account/Register',
+                    data: { username: $("#txtIrdSign").val(), password: $("#txtIrdPassSign1").val() },
+                    dataType: 'json',
+                    method: 'POST',
+                    success: function (result) {
+                        $($(".irdnumber").find("input")).val($("#txtIrdSign").val());
+                        $('#myModal').modal('hide');
+                        $("#logout").show();
+                    },
+                    error: function (xhr, error, errorThrown) {
+                        $(".alert").html("IRD Number already exists.");
+                        $(".alert").slideDown('slow');
+                    }
+                });
+                
             }
-           
+
         });
 
         $("#btnLogin").click(function () {
             if (!(/^\s*$/).test($("#txtIrd").val()) && !(/^\s*$/).test($("#txtPassword").val())) {
-                $('#myModal').modal('hide');
+                $.ajax({
+                    url: '/umbraco/surface/Account/Login',
+                    data: { username: $("#txtIrd").val(), password: $("#txtPassword").val() },
+                    dataType: 'json',
+                    method: 'POST',
+                    success: function (result) {
+                        $($(".irdnumber").find("input")).val($("#txtIrd").val());
+                        $($(".firstname").find("input")).val(result.firstName);
+                        $($(".lastname").find("input")).val(result.lastName);
+                        $($(".emailaddress").find("input")).val(result.email);
+                        $('#myModal').modal('hide');
+                        $("#logout").show();
+                    },
+                    error: function (xhr, error, errorThrown) {
+                        $(".alert").html("Invalid username or password");
+                        $(".alert").slideDown('slow');
+                    }
+                });
+            }
+            else {
+                $(".alert").html("Invalid username or password");
+                $(".alert").slideDown('slow');
             }
         });
     </script>

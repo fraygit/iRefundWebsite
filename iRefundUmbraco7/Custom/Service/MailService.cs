@@ -36,6 +36,29 @@ namespace iRefundUmbraco7.Custom.Service
             client.Send(mail);
         }
 
+        public void SendPassword(string to, string password)
+        {
+            MailMessage mail = new MailMessage();
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "email-smtp.us-west-2.amazonaws.com";
+
+            //mail.To.Add(new MailAddress(to));
+
+            mail.To.Add(new MailAddress(to));
+            mail.From = new MailAddress("info@nztaxation.co.nz");
+            mail.Subject = "iRefund Password Recovery";
+            mail.IsBodyHtml = true;
+            mail.Body = string.Format("Your password is {0}", password);
+            client.UseDefaultCredentials = true;
+            client.Credentials = new NetworkCredential("AKIAIOAQNSRRTBPAUYJA", "Apq3i87mn8EK9ybSibhbGu9Lb6RE0ZurJoh5VvwWJNlN");
+            var userToken = "something";
+            client.Send(mail);
+        }
+
         private string GetMessage(string[] parameters, string templatePath)
         {
             if (File.Exists(templatePath))

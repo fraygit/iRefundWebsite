@@ -451,6 +451,7 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\MemberLogin\Test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -467,6 +468,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Controllers\Account.cs" />
+    <Compile Include="Custom\Controller\MemberLoginSurfaceController.cs" />
     <Compile Include="Custom\Data\Entities\Base\IMongoEntity.cs" />
     <Compile Include="Custom\Data\Entities\Base\MongoEntity.cs" />
     <Compile Include="Custom\Data\Interface\IRefundApplicationRepository.cs" />
@@ -475,6 +478,7 @@
     <Compile Include="Custom\Data\Service\ConnectionHandler.cs" />
     <Compile Include="Custom\Data\Service\EntityService.cs" />
     <Compile Include="Custom\Data\Service\IEntityService.cs" />
+    <Compile Include="Custom\Model\MemberLoginModel.cs" />
     <Compile Include="Custom\Section\ApplicationFormSection.cs" />
     <Compile Include="Custom\Service\MailService.cs" />
     <Compile Include="Custom\SurfaceControllers\ApplicationFormController.cs" />

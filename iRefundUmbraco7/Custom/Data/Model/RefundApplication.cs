@@ -24,5 +24,6 @@ namespace iRefundUmbraco7.Custom.Data.Model
         public string DriverLicenseNumber { get; set; }
         public string CardVersion { get; set; }
         public DateTime ApplicationDate {get; set;}
+        public DateTime lastModified { get; set; }
     }
 }

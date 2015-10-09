@@ -32,18 +32,18 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="navbar-brand">
-                            <a href="index.html"><h1 style="text-transform:none;">i<span>Refund</span></h1></a>
+                            <a href="/"><h1 style="text-transform:none;position:relative;top:-5px;"><span>iRefund</span></h1></a>
                         </div>
                     </div>
 
                     <div class="navbar-collapse collapse">
                         <div class="menu">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation"><a href="/">Home</a></li>
-                                <li role="presentation"><a href="/apply-for-a-refund">Apply for a refund</a></li>
-                                <li role="presentation"><a href="/#howitworks">How it works</a></li>
-                                <li role="presentation"><a href="/#aboutus">About Us</a></li>
-                                
+                                <li role="presentation"><a href="/" style="font-size:12pt;">Home</a></li>
+                                <li role="presentation"><a href="/apply-for-a-refund" style="font-size:12pt;">Apply for a refund</a></li>
+                                <li role="presentation"><a href="/#howitworks" style="font-size:12pt;">How it works</a></li>
+                                <li role="presentation"><a href="/#aboutus" style="font-size:12pt;">About Us</a></li>
+                                <li role="presentation" id="logout" style="display:none;"><a href="javascript:logout();" style="font-size:12pt;">Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,18 +61,17 @@
                 <div class="social-icon">
                     <div class="col-md-4">
                         <ul class="social-network">
-                            <li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+							@RenderSection("footer", required:false)
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-md-offset-4">
                     <div class="copyright">
-                        &copy; June  2015 by <a target="_blank" href="http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Bootstrap Themes</a>. All Rights Reserved.
+						
+                        &copy; 2015 iRefund Ltd. All Rights Reserved.
+					
+						
                     </div>
                     <!--
                         All links in the footer should remain intact.
@@ -99,10 +98,45 @@
     <script src="/assets/js/wow.min.js"></script>
     <script src="/assets/js/functions.js"></script>
 
+    <script type="text/javascript">
+
+        function logout() {
+
+            $.ajax({
+                url: '/umbraco/surface/Account/Logout',
+                data: {},
+                dataType: 'json',
+                method: 'GET',
+                success: function (result) {
+                    document.location.href = "/";
+                },
+                error: function (xhr, error, errorThrown) {
+                    $('#myModal').modal({
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                    $('#myModal').modal('show');
+                }
+            });
+        }
+
+    </script>
+
     @RenderSection("scripts", required: false)
 
 
-</body>
-</html>
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+    ga('create', 'UA-68481705-1', 'auto');
+    ga('send', 'pageview');
 
+    </script>
+
+    </body>
+    </html>
